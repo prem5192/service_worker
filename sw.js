@@ -13,6 +13,11 @@ this.addEventListener('install', function(event) {
         '/service_worker/foodzone_logo.jpg',
         '/service_worker/gallery/',
         '/service_worker/gallery/kit-kat.jpg',
+        '/service_worker/gallery/hersheys.jpg',
+        '/service_worker/gallery/junior_mints.jpg',
+        '/service_worker/gallery/m&m.jpg',
+        '/service_worker/gallery/nabisco-crackers.jpg',
+        '/service_worker/gallery/salisbury-steak.jpg'
       ]);
     })
   );
@@ -32,23 +37,3 @@ this.addEventListener('fetch', function(event) {
     return caches.match('/service_worker/gallery/kitkat.jpg');
   }));
 });
-
-self.addEventListener('activate', function(event) {
-  var cacheList = 'v1';
-  var cacheNames = Object.keys(cacheList).map(function(key) {
-    return cacheList[key];
-  });
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheNames.indexOf(cacheName) == -1) {
-            console.log('Deleted out of date cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-});
-
