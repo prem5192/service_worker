@@ -61,6 +61,8 @@ window.onload = function() {
 
       var colDivSection = divSection.appendChild(document.createElement('div'));
       colDivSection.className = "col-md-4";
+      colDivSection.style.height = "166px";
+      colDivSection.style.width = "535px";
 
       var dataDivSection = colDivSection.appendChild(document.createElement('div'));
       dataDivSection.style.display = "block";
