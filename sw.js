@@ -11,7 +11,6 @@ this.addEventListener('install', function(event) {
         '/service_worker/app.js',
         '/service_worker/image-list.js',
         '/service_worker/foodzone_logo.jpg',
-        '/service_worker/gallery/',
         '/service_worker/gallery/kit-kat.jpg'
       ]);
     })
