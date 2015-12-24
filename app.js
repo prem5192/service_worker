@@ -22,7 +22,7 @@ function imgLoad(imgJSON) {
   return new Promise(function(resolve, reject) {
     var request = new XMLHttpRequest();
     request.open('GET', imgJSON.url);
-    request.responseType = 'blob';
+   // request.responseType = 'blob';
 
     request.onload = function() {
       if (request.status == 200) {
