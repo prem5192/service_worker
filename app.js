@@ -53,9 +53,9 @@ window.onload = function() {
 
       var myImage = document.createElement('img');
       var myCaption = document.createElement('caption');
-      var imageURL = window.URL.createObjectURL(arrayResponse[0]);
+      //var imageURL = window.URL.createObjectURL(arrayResponse[0]);
 
-      myImage.src = imageURL;
+      myImage.src = arrayResponse[1].url;
       myImage.setAttribute('alt', arrayResponse[1].alt);
       myCaption.innerHTML = '<strong>' + arrayResponse[1].name + '</strong>';
 
